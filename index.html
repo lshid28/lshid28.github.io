@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Jungwoo Lee</title>
+
+    <meta name="author" content="Jungwoo Lee">
+    <meta name="description" content="Jungwoo Lee - high school student in South Korea interested in robotics and mechanical engineering.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style>
+      /* additions to the original template */
+      .name { font-size: 35px; }
+      h2 { font-size: 26px; }
+      .eq { white-space: nowrap; }
+      /* research entries: title across the full width, then thumbnail (35%) + text */
+      .paper-title { margin-bottom: 10px; }
+      .papertitle { font-size: 17px; }
+      .paper-body { display: flex; align-items: center; gap: 20px; }
+      .paper-thumb { flex: 0 0 35%; max-width: 35%; }
+      .paper-text { flex: 1 1 auto; min-width: 0; }
+      .paper-thumb .one { width: 100%; height: auto; aspect-ratio: 1 / 1; }
+      .paper-thumb .two { width: 100%; height: 100%; top: 0; left: 0; }
+      .paper-thumb img { display: block; }
+      /* on phones, stack the thumbnail above the text */
+      @media (max-width: 600px) {
+        .paper-body { flex-direction: column; align-items: stretch; }
+        .paper-thumb { flex: none; width: 100%; max-width: 300px; margin: 0 auto; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+
+          <!-- ============================== INTRO ============================== -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Jungwoo Lee
+                </p>
+                <p>
+                  I'm a high school student at Chungnam Samsung High School in South Korea, where I'm completing the IB Diploma Programme.
+                  I live in Gyeonggi-do, South Korea.
+                </p>
+                <p>
+                  I'm currently applying to universities in the United States to study <strong>mechanical engineering</strong>, with a particular interest in <strong>robotics</strong>.
+                </p>
+                <p style="text-align:center">
+                  <!-- TODO: replace the placeholder links below, or delete any you don't need -->
+                  <a href="mailto:your.email@example.com">Email</a> &nbsp;/&nbsp;
+                  <a href="data/JungwooLee-CV.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/your-github-id">GitHub</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <!-- TODO: replace images/JungwooLee.jpg with a square photo (same file name) -->
+                <a href="images/JungwooLee.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/JungwooLee.jpg"></a>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- ============================== RESEARCH ============================== -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>
+                  I'm interested in <strong>robotics</strong> and <strong>mechanical engineering</strong>, especially the dynamics of mechanical systems (impact, rotation, vibration and fluid flow) and how they shape the way machines move and make contact with the world.
+                  I like building my own experimental apparatus and turning a physical intuition into a quantitative model.
+                  Representative work is <span class="highlight">highlighted</span>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+<!-- ---------- 1. Physics HL Extended Essay ---------- -->
+<tr class="paper" onmouseout="icr_stop()" onmouseover="icr_start()" bgcolor="#ffffd0">
+  <td style="padding:16px">
+    <div class="paper-title"><span class="papertitle">The Driving Point of Oscillation and the Instantaneous Center of Rotation in a Uniform Wooden Rod</span></div>
+    <div class="paper-body">
+      <div class="paper-thumb">
+      <a href="images/ee_icr_result_full.png"><div class="one">
+        <div class="two" id='icr_image'>
+          <img src='images/ee_icr_result.png' width=100% alt="Measured ICR position vs. driving point with power-law fit">
+        </div>
+        <img src='images/ee_icr_setup.jpg' width=100% alt="Custom-built apparatus and Tracker motion analysis of the rod">
+      </div></a>
+      <script type="text/javascript">
+        function icr_start() {
+          document.getElementById('icr_image').style.opacity = "1";
+        }
+  
+        function icr_stop() {
+          document.getElementById('icr_image').style.opacity = "0";
+        }
+        icr_stop()
+      </script>
+      </div>
+      <div class="paper-text">
+      <strong>Jungwoo Lee</strong>
+      <br>
+      <em>IB Extended Essay, Physics HL</em> (Rigid Body Dynamics), 2026
+      <br>
+      <!-- TODO (optional): add links once available, e.g.
+      <a href="data/EE_ICR.pdf">paper</a> /
+      <a href="https://youtu.be/...">video</a>
+      -->
+      <p></p>
+      <p>
+        Inspired by the "sweet spot" of a baseball bat, this essay asks how the position of the driving point of oscillation (x<sub>osc</sub>) determines the position of the instantaneous center of rotation (x<sub>ICR</sub>) in a 100&nbsp;cm uniform pine rod.
+        Treating small-amplitude oscillation as a rapid succession of impacts, I derived <span class="eq">x<sub>ICR</sub> = &minus;(L<sup>2</sup>/12)&middot;x<sub>osc</sub><sup>&minus;1</sup></span> from the superposition of translational and rotational motion.
+        I built a wooden support frame and an intermediate linkage driven by a linear actuator (2.6&ndash;3.4&nbsp;Hz), filmed nine driving points at 60&nbsp;fps, and tracked 19 holes along the rod in Tracker.
+        Fourier spectra isolated the driving frequency, sinusoidal regression gave each hole's amplitude, and the zero-amplitude intercept located the ICR.
+        The data follow <span class="eq">x<sub>ICR</sub> = (&minus;924&nbsp;&plusmn;&nbsp;198)&middot;x<sub>osc</sub><sup>&minus;1.08&nbsp;&plusmn;&nbsp;0.09</sup></span> (R<sup>2</sup>&nbsp;&asymp;&nbsp;0.998), consistent with the predicted inverse law (exponent &minus;1, constant &minus;833), with the pivot always on the opposite side of the center of mass.
+        The same principle lets a robotic arm strike or capture objects at its center of percussion to minimize shock transmitted to its joints and base.
+      </p>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- ---------- 2. Math AI HL Internal Assessment ---------- -->
+<tr class="paper" onmouseout="susp_stop()" onmouseover="susp_start()">
+  <td style="padding:16px">
+    <div class="paper-title"><span class="papertitle">Phase Portraits of a One-Degree-of-Freedom Quarter-Car Suspension</span></div>
+    <div class="paper-body">
+      <div class="paper-thumb">
+      <a href="images/math_suspension_underdamped_full.png"><div class="one">
+        <div class="two" id='susp_image'>
+          <img src='images/math_suspension_underdamped.png' width=100% alt="Phase portrait of the under-damped suspension (clockwise spiral)">
+        </div>
+        <img src='images/math_quarter_car_model.png' width=100% alt="One-degree-of-freedom quarter-car model: mass, spring and damper">
+      </div></a>
+      <script type="text/javascript">
+        function susp_start() {
+          document.getElementById('susp_image').style.opacity = "1";
+        }
+  
+        function susp_stop() {
+          document.getElementById('susp_image').style.opacity = "0";
+        }
+        susp_stop()
+      </script>
+      </div>
+      <div class="paper-text">
+      <strong>Jungwoo Lee</strong>
+      <br>
+      <em>IB Mathematics: Applications and Interpretation HL Internal Assessment</em>, 2026
+      <p></p>
+      <p>
+        Motivated by how differently a car and a bus ride over the same speed bump, this exploration models one wheel of a car as a 1-DOF quarter-car (m&nbsp;=&nbsp;400&nbsp;kg, k&nbsp;=&nbsp;10&nbsp;000&nbsp;N&nbsp;m<sup>&minus;1</sup>) released 0.1&nbsp;m above equilibrium.
+        I rewrote <span class="eq">m&#7821; + c&#7819; + kx = 0</span> as a coupled first-order system <span class="eq">X&prime; = MX</span> and used its characteristic equation <span class="eq">&lambda;<sup>2</sup> + (c/400)&lambda; + 25 = 0</span> to show that the suspension is stable for every c&nbsp;&gt;&nbsp;0 and is critically damped at <span class="eq">c = 4000&nbsp;N&nbsp;s&nbsp;m<sup>&minus;1</sup></span>.
+        Solving exactly with eigenvalues and eigenvectors for critically damped (&lambda;&nbsp;=&nbsp;&minus;5, repeated), over-damped (&lambda;&nbsp;=&nbsp;&minus;2.5, &minus;10) and under-damped (&zeta;&nbsp;=&nbsp;0.3, <span class="eq">&lambda; &asymp; &minus;1.5 &plusmn; 4.77i</span>) suspensions, I drew their phase portraits in Python.
+        They show a degenerate node, a node whose final approach follows the slow eigenvector <span class="eq">v = &minus;2.5x</span>, and a clockwise spiral that keeps only about 14% of its amplitude after each oscillation, which is the repeated bouncing I felt on the bus.
+        Which damping is "best" depends on whether settling time, overshoot or comfort is being optimized.
+      </p>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- ---------- 3. Physics HL Internal Assessment ---------- -->
+<tr class="paper" onmouseout="flow_stop()" onmouseover="flow_start()" bgcolor="#ffffd0">
+  <td style="padding:16px">
+    <div class="paper-title"><span class="papertitle">Volumetric Flow Rate of Water and Pipe Length and Radius under Constant Hydrostatic Pressure</span></div>
+    <div class="paper-body">
+      <div class="paper-thumb">
+      <a href="images/phys_flow_design_full.jpg"><div class="one">
+        <div class="two" id='flow_image'>
+          <img src='images/phys_flow_apparatus.jpg' width=100% alt="The built acrylic constant-head tank with interchangeable pipes">
+        </div>
+        <img src='images/phys_flow_design.png' width=100% alt="Prototype design of the constant-head tank and pipes">
+      </div></a>
+      <script type="text/javascript">
+        function flow_start() {
+          document.getElementById('flow_image').style.opacity = "1";
+        }
+  
+        function flow_stop() {
+          document.getElementById('flow_image').style.opacity = "0";
+        }
+        flow_stop()
+      </script>
+      </div>
+      <div class="paper-text">
+      <strong>Jungwoo Lee</strong>
+      <br>
+      <em>IB Physics HL Internal Assessment</em>, 2026
+      <p></p>
+      <p>
+        Noticing that different café straws deliver very different amounts of drink, I measured how the volumetric flow rate Q of water depends on the radius (1&ndash;3&nbsp;mm) and length (10&ndash;50&nbsp;cm) of acrylic pipes.
+        A custom-built, continuously overflowing acrylic tank held the water head, and therefore the driving pressure, constant, and Q was found by weighing the water discharged in 30&nbsp;s.
+        Combining the two power laws gave <span class="eq">Q = 10.71&middot;r<sup>2.3&nbsp;&plusmn;&nbsp;0.8</sup>/L<sup>0.38&nbsp;&plusmn;&nbsp;0.05</sup></span> (R<sup>2</sup>&nbsp;=&nbsp;0.997 for the combined fit).
+        Compared with a turbulent model derived from the Darcy&ndash;Weisbach equation and the Blasius correlation <span class="eq">(Q &prop; r<sup>2.71</sup>L<sup>&minus;0.571</sup>)</span>, the radius exponent agreed within uncertainty but the length exponent differed significantly.
+        Calculating the Reynolds numbers (about 1200&ndash;6500) explained why: the flows spanned laminar, transitional and turbulent regimes, so no single-regime model applies, and I proposed how to redesign the apparatus to keep every pipe in one regime.
+      </p>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- ---------- 4. Chemistry HL Internal Assessment ---------- -->
+<tr class="paper" onmouseout="kc_stop()" onmouseover="kc_start()">
+  <td style="padding:16px">
+    <div class="paper-title"><span class="papertitle">The Effect of Temperature on the Equilibrium Constant of Iron(III) Thiocyanate</span></div>
+    <div class="paper-body">
+      <div class="paper-thumb">
+      <a href="images/chem_kc_vanthoff_full.png"><div class="one">
+        <div class="two" id='kc_image'>
+          <img src='images/chem_kc_vanthoff.png' width=100% alt="van 't Hoff plot of ln Kc against 1/T">
+        </div>
+        <img src='images/chem_kc_solutions.jpg' width=100% alt="Iron(III) solutions prepared for the investigation">
+      </div></a>
+      <script type="text/javascript">
+        function kc_start() {
+          document.getElementById('kc_image').style.opacity = "1";
+        }
+  
+        function kc_stop() {
+          document.getElementById('kc_image').style.opacity = "0";
+        }
+        kc_stop()
+      </script>
+      </div>
+      <div class="paper-text">
+      <strong>Jungwoo Lee</strong>
+      <br>
+      <em>IB Chemistry HL Internal Assessment</em>, 2026
+      <p></p>
+      <p>
+        This investigation measures how temperature (10&ndash;50&nbsp;&deg;C) affects the equilibrium constant of <span class="eq">Fe<sup>3+</sup>(aq) + SCN<sup>&minus;</sup>(aq) &#8652; [Fe(SCN)]<sup>2+</sup>(aq)</span>.
+        I built a Beer&ndash;Lambert calibration curve at 458&nbsp;nm with a UV-Vis spectrophotometer <span class="eq">(&epsilon; = 4790 &plusmn; 270&nbsp;dm<sup>3</sup>&nbsp;mol<sup>&minus;1</sup>&nbsp;cm<sup>&minus;1</sup>)</span>, added nitric acid to suppress Fe<sup>3+</sup> hydrolysis, and measured equilibrium mixtures as they cooled or warmed through each target temperature.
+        K<sub>c</sub> fell from 310&nbsp;&plusmn;&nbsp;50 at 11.2&nbsp;&deg;C to 200&nbsp;&plusmn;&nbsp;30 at 49.8&nbsp;&deg;C, as Le Chatelier's principle predicts for an exothermic forward reaction, and a van 't Hoff plot of ln&nbsp;K<sub>c</sub> against 1/T was linear (R<sup>2</sup>&nbsp;=&nbsp;0.97).
+        The absolute values were about twice the literature value at 20&nbsp;&deg;C; I traced this systematic error mainly to moisture absorbed by aged reagents and to gas bubbles released on heating, and proposed specific improvements.
+      </p>
+      </div>
+    </div>
+  </td>
+</tr>
+
+          </tbody></table>
+
+          <!-- ============================== OTHER ACADEMIC WORK ============================== -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Other Academic Work</h2>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+<!-- ---------- 1. Economics SL Internal Assessment ---------- -->
+<tr class="paper" onmouseout="tariff_stop()" onmouseover="tariff_start()">
+  <td style="padding:16px">
+    <div class="paper-title"><span class="papertitle">China's Anti-Dumping Tariffs on EU Pork and Cross-Sector Interdependence</span></div>
+    <div class="paper-body">
+      <div class="paper-thumb">
+      <a href="images/econ_tariff_final_full.png"><div class="one">
+        <div class="two" id='tariff_image'>
+          <img src='images/econ_tariff_final.png' width=100% alt="Pork market under the final 9.8% tariff">
+        </div>
+        <img src='images/econ_tariff_preliminary.png' width=100% alt="Pork market under the preliminary 62.4% tariff">
+      </div></a>
+      <script type="text/javascript">
+        function tariff_start() {
+          document.getElementById('tariff_image').style.opacity = "1";
+        }
+  
+        function tariff_stop() {
+          document.getElementById('tariff_image').style.opacity = "0";
+        }
+        tariff_stop()
+      </script>
+      </div>
+      <div class="paper-text">
+      <strong>Jungwoo Lee</strong>
+      <br>
+      <em>IB Economics SL Internal Assessment</em>, Commentary 3 (Global Economics), 2026
+      <br>
+      <a href="https://www.reuters.com/world/asia-pacific/china-cuts-eu-pork-tariffs-final-ruling-2025-12-16/">source article (Reuters)</a>
+      <p></p>
+      <p>
+        Using tariff diagrams, this commentary compares China's preliminary (up to 62.4%) and final (mostly 9.8%) anti-dumping duties on EU pork, showing how the smaller tariff shrinks every welfare effect.
+        I argue that the tariff moved more with the separate EU&ndash;China dispute over electric-vehicle tariffs than with the pork market itself: interdependence can de-escalate two conflicts at once, but it shifts risk onto exporters.
+      </p>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- ---------- TEMPLATE: copy this block to add a new entry ----------
+<tr class="paper" onmouseout="newid_stop()" onmouseover="newid_start()">
+  <td style="padding:16px">
+    <div class="paper-title"><span class="papertitle">Title</span></div>
+    <div class="paper-body">
+      <div class="paper-thumb">
+      <div class="one">
+        <div class="two" id='newid_image'><img src='images/newid_after.png' width=100%></div>
+        <img src='images/newid_before.jpg' width=100%>
+      </div>
+      <script type="text/javascript">
+        function newid_start() { document.getElementById('newid_image').style.opacity = "1"; }
+        function newid_stop() { document.getElementById('newid_image').style.opacity = "0"; }
+        newid_stop()
+      </script>
+      </div>
+      <div class="paper-text">
+      <strong>Jungwoo Lee</strong>
+      <br>
+      <em>Venue / Course</em>, Year
+      <p></p>
+      <p>Abstract.</p>
+      </div>
+    </div>
+  </td>
+</tr>
+------------------------------------------------------------------ -->
+
+          </tbody></table>
+
+          <!-- ============================== ACTIVITIES & SERVICE ============================== -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Activities &amp; Service</h2>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+<!-- ---------- 1. TODO: replace this sample entry with a real activity ---------- -->
+<tr class="paper">
+  <td style="padding:16px">
+    <div class="paper-title"><span class="papertitle">Activity Name</span></div>
+    <div class="paper-body">
+      <div class="paper-thumb">
+        <div class="one">
+          <img src='images/activity_placeholder.png' width=100% alt="Activity photo">
+        </div>
+      </div>
+      <div class="paper-text">
+        <strong>Role</strong>, Organization
+        <br>
+        <em>Grades 10&ndash;12 (2024&ndash;2026)</em>, about 3 hours per week
+        <p></p>
+        <p>
+          One or two sentences on what you did and what changed because of it (about 60 words). Lead with your own contribution and a concrete result, such as people served, hours, money raised, or something you built.
+        </p>
+      </div>
+    </div>
+  </td>
+</tr>
+
+<!-- ---------- TEMPLATE: copy this block to add a new activity ----------
+<tr class="paper">
+  <td style="padding:16px">
+    <div class="paper-title"><span class="papertitle">Activity Name</span></div>
+    <div class="paper-body">
+      <div class="paper-thumb">
+        <div class="one"><img src='images/ACTIVITY_PHOTO.jpg' width=100% alt="..."></div>
+      </div>
+      <div class="paper-text">
+        <strong>Role</strong>, Organization
+        <br>
+        <em>Grades / Years</em>, hours per week
+        <p></p>
+        <p>Description (about 60 words).</p>
+      </div>
+    </div>
+  </td>
+</tr>
+------------------------------------------------------------------ -->
+
+          </tbody></table>
+
+          <!-- ============================== FOOTER ============================== -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Website template adapted from <a href="https://github.com/jonbarron/website">Jon Barron's source code</a>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
